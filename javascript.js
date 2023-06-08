@@ -7,5 +7,13 @@ for (i = 1; i <= (16 * 16); i++) {
   gridContainer.appendChild(div);
 }
 
+const divs = document.querySelectorAll(".grid_square");
+
+divs.forEach((div) => {
+  div.addEventListener("mouseover", (e) => {
+    div.setAttribute("class", "hovered_square");
+  })
+})
+
 
 
