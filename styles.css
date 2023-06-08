@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.grid_square {
+  width: 20px;
+  height: 20px;
+  background-color: brown;
+}
+
+.grid_container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+}
