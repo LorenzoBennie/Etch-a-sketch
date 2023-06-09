@@ -15,8 +15,13 @@
     <div class="content">
       <div class="grid_container"></div>
       <div class="tools">
+        <div class="colour_tools">  
+          <div><button onclick="defCol ()" class="defaultcolour">BLACK</button></div>
+          <div><button onclick="genRanCol ()">Random</button></div>
+          <input type="color" id="colourpicker" value="#000000">
+        </div>
         <div><button onclick="askUser ()">choose size</button></div>
-        <input type="color" id="colourpicker" value="#000000">
+        <div><button onclick="clearGrid ()">CLEAR</button></div> 
       </div>      
     </div>
 

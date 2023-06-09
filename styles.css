@@ -24,4 +24,5 @@ body {
 .tools {
   border: 2px solid black;
   height: 100px;
+  display: flex;
 }

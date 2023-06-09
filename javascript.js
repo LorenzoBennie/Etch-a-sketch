@@ -1,11 +1,60 @@
+//Clears the grid//
+function clearGrid () {
+  console.log("balls");
+  const divs = document.querySelectorAll(".grid_square");
+
+  divs.forEach((div) => {
+    div.style.backgroundColor = "rgb(255,255,255)";
+  })
+}
+
+
+//function generates random colours//
+let r;
+let g;
+let b;
+
+function randomColourGen () {
+  r = Math.floor((Math.random() * 255));
+  g = Math.floor((Math.random() * 255));
+  b = Math.floor((Math.random() * 255));
+  userColour = `rgb(${r},${g},${b})`; 
+}
+
+//function returns the colour to the default value//
+function defCol () {
+  userColour = "#000000";
+  console.log("notballs")
+
+  const divs = document.querySelectorAll(".grid_square");
+
+  divs.forEach((div) => {
+    div.removeEventListener("mouseout", randomColourGen);
+  }) 
+}
+
 //allows the colour picker to change the colour used in the grid//
 let colButton = document.getElementById("colourpicker");
 let userColour = colButton.value;
-console.log(colButton)
 
 colButton.addEventListener("change", (e) => {
+  const divs = document.querySelectorAll(".grid_square");
+  divs.forEach((div) => {
+    div.removeEventListener("mouseout", randomColourGen);
+  })
   userColour = e.target.value;
 })
+
+//function generate random colours for each pass through//
+function genRanCol () {
+  randomColourGen ();
+  const divs = document.querySelectorAll(".grid_square");
+  
+  divs.forEach((div) => {
+    div.addEventListener("mouseout", randomColourGen);
+  })
+}
+
 
 //function creates a hover effect for each of the squares//
 function hover () {
