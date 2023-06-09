@@ -15,16 +15,29 @@
     <div class="content">
       <div class="grid_container"></div>
       <div class="tools">
-        <div class="colour_tools">  
-          <div><button onclick="defCol ()" class="defaultcolour">BLACK</button></div>
-          <div><button onclick="genRanCol ()">Random</button></div>
-          <input type="color" id="colourpicker" value="#000000">
+        <div class="colour_tools">
+          <div class="colourcontainer">
+            <div><button onclick="defCol ()" class="defaultcolour"></button></div>
+            <div>Default</div>
+          </div>  
+          <div class="colourcontainer">  
+            <div><button onclick="genRanCol ()" class="randomcolour"></button></div>
+            <div>Random</div>
+          </div>
+          <div class="colourcontainer">  
+            <input type="color" id="colourpicker" value="#00FF41">
+            <div>Colour picker</div>
+          </div>      
         </div>
-        <div><button onclick="clearGrid ()">CLEAR</button></div>
+        <div><button onclick="clearGrid ()" class="clearbutton">Clear</button></div>
         <div class="slidecontainer">
           <input type="range" min="16" max="100" value="16" id="slider" onchange="sliderChange ()">
+          <p class="changebrush">change brush size</p>
         </div> 
-      </div>      
+      </div>
+      <footer>
+        Created by Lorenzo Bennie for The Odin Prject
+      </footer>        
     </div>
 
   </body>

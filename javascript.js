@@ -4,7 +4,7 @@ function clearGrid () {
   const divs = document.querySelectorAll(".grid_square");
 
   divs.forEach((div) => {
-    div.style.backgroundColor = "rgb(255,255,255)";
+    div.style.backgroundColor = "rgb(0,0,0)";
   })
 }
 
@@ -23,7 +23,7 @@ function randomColourGen () {
 
 //function returns the colour to the default value//
 function defCol () {
-  userColour = "#000000";
+  userColour = "#00FF41";
   console.log("notballs")
 
   const divs = document.querySelectorAll(".grid_square");

@@ -3,14 +3,22 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: black;
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 0;
 }
 
 .title {
   font-family: 'Press Start 2P', cursive;
+  border: 0px solid #008F11;
+  font-size: 30px;
+  padding: 5px;
+  margin-bottom: 5px;
+  color: #00FF41;
 }
 
 .grid_square {
-  background-color: white;
+  background-color: black;
 }
 
 .grid_container {
@@ -18,11 +26,129 @@ body {
   flex-wrap: wrap;
   width: 640px;
   height: 640px;
-  border: 2px solid black;
+  border: 8px solid #008F11;;
+  border-radius: 5px;
 }
 
 .tools {
-  border: 2px solid black;
-  height: 100px;
+  border: 8px solid #008F11;;
+  height: 120px;
+  width: 640px;
   display: flex;
+  justify-content: space-around;
+  margin-top: 0px;
+  flex: 1 1 auto;
+  border-radius: 5px;
+
+}
+
+.colour_tools button {
+  font-family: 'Press Start 2P', cursive;
+  width: 30px;
+  height: 30px;
+  border-radius: 80%;
+  cursor: pointer;
+}
+
+.colour_tools {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: space-evenly;
+  font-family: 'Press Start 2P', cursive;
+  color: #00FF41;
+
+}
+
+.defaultcolour {
+  background-color: #00FF41;
+}
+
+.randomcolour {
+  background-image: linear-gradient(green, pink, purple, yellow);
+}
+
+#colourpicker {
+  appearance: 0;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 80%;
+  background-color: #008F11;
+}
+
+.colourcontainer {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  gap: 8px;
+}
+
+.clearbutton {
+  font-family: 'Press Start 2P', cursive;
+  color: #00FF41;
+  padding: 5px;
+  margin-top: 5px;
+  width: 150px;
+  border-radius: 5px;
+  border: 5px solid #008F11;
+  background-color: black;
+  cursor: pointer;
+}
+
+#slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #008F11;
+  outline: none;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  background: #00FF41;
+  cursor: pointer;
+}
+
+#slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00FF41;
+  cursor: pointer;
+}
+
+.changebrush {
+  font-family: 'Press Start 2P', cursive;
+  color: #00FF41;
+  font-size: 10px;
+}
+
+.slidecontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  font-family: 'Press Start 2P', cursive;
+  color: #00FF41;
+  border: 0px solid #008F11;
+  padding: 5px;
+  margin-top: 20px;
+  width: 100%;
 }
