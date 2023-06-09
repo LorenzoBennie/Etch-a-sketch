@@ -55,6 +55,17 @@ function genRanCol () {
   })
 }
 
+//allows the slider to choose the square size//
+function sliderChange () {
+  const sliderElement = document.getElementById("slider");
+  console.log(sliderElement.value + 1000);
+  remChild (gridContainer);
+  squareSize = sliderElement.value;
+  createGrid(squareSize);
+  hover();
+}  
+
+
 
 //function creates a hover effect for each of the squares//
 function hover () {
@@ -91,18 +102,7 @@ let squareSize = 16;
 createGrid(squareSize);
 hover();
 
-//asks the users for their size preference//
-function askUser () {
-  let userSelection = prompt("Choose the number of pixels per side", "16");
-  if (parseInt(userSelection) > 100) {
-    userSelection = prompt("Number is too large. Try again");
-  }
-  squareSize = parseInt(userSelection);
 
-  remChild (gridContainer);
-  createGrid(squareSize);
-  hover();
-}
 
 
 

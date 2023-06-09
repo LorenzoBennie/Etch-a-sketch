@@ -20,8 +20,10 @@
           <div><button onclick="genRanCol ()">Random</button></div>
           <input type="color" id="colourpicker" value="#000000">
         </div>
-        <div><button onclick="askUser ()">choose size</button></div>
-        <div><button onclick="clearGrid ()">CLEAR</button></div> 
+        <div><button onclick="clearGrid ()">CLEAR</button></div>
+        <div class="slidecontainer">
+          <input type="range" min="16" max="100" value="16" id="slider" onchange="sliderChange ()">
+        </div> 
       </div>      
     </div>
 
