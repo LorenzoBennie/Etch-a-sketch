@@ -5,8 +5,12 @@ body {
   align-items: center;
 }
 
+.title {
+  font-family: 'Press Start 2P', cursive;
+}
+
 .grid_square {
-  background-color: red;
+  background-color: white;
 }
 
 .grid_container {
@@ -14,8 +18,14 @@ body {
   flex-wrap: wrap;
   width: 640px;
   height: 640px;
+  border: 2px solid black;
 }
 
 .hovered_square {
-  background-color: blue;
+  background-color: black;
+}
+
+.tools {
+  border: 2px solid black;
+  height: 100px;
 }
