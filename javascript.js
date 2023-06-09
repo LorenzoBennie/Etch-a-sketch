@@ -1,10 +1,19 @@
+//allows the colour picker to change the colour used in the grid//
+let colButton = document.getElementById("colourpicker");
+let userColour = colButton.value;
+console.log(colButton)
+
+colButton.addEventListener("change", (e) => {
+  userColour = e.target.value;
+})
+
 //function creates a hover effect for each of the squares//
 function hover () {
   const divs = document.querySelectorAll(".grid_square");
 
   divs.forEach((div) => {
     div.addEventListener("mouseover", (e) => {
-      div.setAttribute("class", "hovered_square");
+      div.style.backgroundColor = `${userColour}`;
     })
   })
 }
@@ -45,5 +54,10 @@ function askUser () {
   createGrid(squareSize);
   hover();
 }
+
+
+
+
+
 
 

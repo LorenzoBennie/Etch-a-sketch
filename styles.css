@@ -21,10 +21,6 @@ body {
   border: 2px solid black;
 }
 
-.hovered_square {
-  background-color: black;
-}
-
 .tools {
   border: 2px solid black;
   height: 100px;
